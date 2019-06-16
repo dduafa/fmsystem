@@ -1,0 +1,75 @@
+{% load static %}
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'index' %}">
+        <i class="menu-icon mdi mdi-television"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#stations" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon mdi mdi-store"></i>
+        <span class="menu-title">Stations</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="stations">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tanks:create_tank' %}">All Stations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'stations:create_station' %}">New Station</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#tanks" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon mdi mdi-tag-text-outline"></i>
+        <span class="menu-title">Tanks</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="tanks">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Tanks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tanks:create_tank' %}">New Tank</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="ui-basic">
+        <i class="menu-icon mdi mdi-account-multiple"></i>
+        <span class="menu-title">Users</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="users">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New User</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="menu-icon mdi mdi-backup-restore"></i>
+        <span class="menu-title">Form elements</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="menu-icon mdi mdi-power"></i>
+        <span class="menu-title">Logout</span>
+      </a>
+    </li>
+  </ul>
+</nav>

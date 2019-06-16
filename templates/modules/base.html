@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fuel Management System</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors/iconfonts/mdi/css/materialdesignicons.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/style.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+    </head>
+    <body>
+        <div class="container-scroller">
+            {% include 'modules/navbar.html' %}
+            <div class="container-fluid page-body-wrapper">
+                {% include 'modules/sidebar.html' %}
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                            {% block content %} 
+        
+                            {% endblock %}
+                        {% include 'modules/footer.html' %}                
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+        <script src="{% static 'vendors/js/vendor.bundle.addons.js' %}"></script>
+        <script src="{% static 'vendors/js/off-canvas.js' %}"></script>
+        <script src="{% static 'vendors/js/misc.js' %}"></script>
+        <script src="{% static 'vendors/js/dashboard.js' %}"></script>
+
+        {% block script %}
+        {% endblock %}
+    </body>
+</html>
